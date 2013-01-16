@@ -105,6 +105,7 @@ private:
     QString clearInsertText(QString texte) const;
     QString catParser(const QString &contenu) const;
     QString genCatFile(const QMap<QString, Programme> &programmes) const;
+    QString convToRawFormat(const QString &contenu) const;
     int countCatFile(const QString &contenuCatFile) const;
     QDomDocument genFichierProjet(const Projet & projet) const;
     void ecrireProgramme(QString nomFichier, const QString &contenu) const;
@@ -115,6 +116,7 @@ private:
     QTreeWidget *treeView;
     QTabWidget *onglets;
 
+    QMap<QString, QString> rawEquiv;
     QStringList keywordPatterns;
     QStringList specialCharsPatterns;
 };
